@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7a83d58e46.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
+        <a href="#" class="navbar-brand"><img src="./images/home.png" class="home align-baseline mx-auto"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="navbar-nav order-first order-sm-2">
+            <li class="nav-item"><a href="#" class="nav-link open-btn" onclick="openPanel()"><img
+                        src="./images/profile.png" style="width: 25px;"></a>
+            </li>
+        </ul>
+
+        <div id="collapsible" class="collapse navbar-collapse order-2 order-sm-1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-solid fa-compass mr-2"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-solid fa-user mr-2"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-solid fa-envelope mr-2"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-solid fa-bell"></i></a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="btn close-btn d-block" onclick="closePanel()">&times;<a>
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action"><i
+                            class="fa fa-solid fa-user  mr-2"></i>Profile</a>
+                    <a class="list-group-item list-group-item-action"><i
+                            class="fa fa-solid fa-bookmark mr-2"></i>Saved</a>
+                    <a class="list-group-item list-group-item-action"><i
+                            class="fa fa-solid fa-gear mr-2"></i>Settings</a>
+                </div>
+    </div>
+
+    <div id="main" class="container-fluid" style="margin-top: 80px;">
+
+        <div class="row">
+
+            <div class="col-sm-3 px-1">
+
+                <div class="card shadow mx-auto mb-2">
+                    <img class="card-img-top mx-auto" src="./images/profile.png" style="width: 6.25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">My Profile</h5>
+                        <p class="card-text"><i class="fa fa-solid fa-pen mr-3"></i><span>Front-end
+                                Developer</span></p>
+                        <p><i class="fa fa-solid fa-building mr-3"></i><span>Codefeed Infotech</span></p>
+                        <p class="card-text"><i class="fa fa-solid fa-house-user mr-3"></i><span>Bangalore,
+                                Karnataka</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="accordion">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text-black-50" data-toggle="collapse" href="#collapseOne">My Groups</a>
+                        </div>
+                        <div id="collapseOne" class="collapsed show" data-parent="#accordion">
+                            <div class="card-body">
+                                <input class="form-control" type="text" placeholder="Some Text..">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text-black-50" data-toggle="collapse" href="#collapseTwo">Event</a>
+                        </div>
+                        <div id="collapseTwo" class="collapsed" data-parent="#accordion">
+                            <div class="card-body">
+                                <input type="text" class="form-control" placeholder="Some Text..">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text-black-50" data-toggle="collapse" href="#collapseThree">My
+                                Photos</a>
+                        </div>
+                        <div id="collapseThree" class="collapsed" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap mx-auto">
+                                    <div><img class="img-fluid p-2" src="./images/mountain.jpg" alt="mountain"
+                                            style="width: 6.25rem;"></div>
+                                    <div><img class="img-fluid p-2" src="./images/sea.jpg" alt="sea"
+                                            style="width: 6.25rem;"></div>
+                                    <div><img class="img-fluid p-2" src="./images/thunder.jpg" alt="thunder"
+                                            style="width: 6.25rem;"></div>
+                                    <div><img class="img-fluid p-2" src="./images/snow.jpg" alt="snow"
+                                            style="width: 6.25rem;"></div>
+                                    <div><img class="img-fluid p-2" src="./images/lake.jpg" alt="lake"
+                                            style="width: 6.25rem;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-7 px-1">
+
+                <div class="border p-3 mb-2 rounded shadow">
+                    <h4>Write something to post...</h4>
+                    <input class="form-control mb-2" type="text" placeholder="Start writing..">
+                    <button class="btn btn-dark mb-2" type="submit"><i
+                            class="fa fa-solid fa-pencil mr-2"></i>Post</button>
+                </div>
+
+                <div class="feed border shadow p-2 rounded">
+                    <div class="d-flex justify-content-between mt-2">
+                        <img class="mr-2" src="./images/man.png" style="width: 4rem">
+                        <h4 class="mr-auto">Avin Wilson</h4>
+                        <p class="text-black-50"><i>5 min ago</i></p>
+                    </div>
+                    <div class="feed-body">
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                        <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+                            <div>
+                                <img src="./images/lake.jpg" class="resp m-2 pr-2">
+                            </div>
+                            <div>
+                                <img src="./images/grass-land.jpg" class="resp m-2 pr-2">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-dark m-3" type="button"><i
+                                class="fa fa-solid fa-thumbs-up mr-2"></i>Like</button>
+                        <button data-toggle="collapse" data-target="#comment" class="btn btn-dark m-3" type="button"><i
+                                class="fa fa-solid fa-comment mr-2"></i>Comment</button>
+                        <div id="comment" class="collapse">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Type your comment..">
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark" type="submit"><i
+                                            class="fa fa-solid fa-comment-dots"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed border shadow p-2 rounded">
+                    <div class="d-flex justify-content-between mt-2">
+                        <img class="mr-2" src="./images/woman (2).png" style="width: 4rem">
+                        <h4 class="mr-auto">Some name</h4>
+                        <p class="text-black-50"><i>15 min ago</i></p>
+                    </div>
+                    <div class="feed-body">
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                        <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+                            <div>
+                                <img src="./images/grass-land (2).jpg" class="m-2 pr-2" style="width: 100%;">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-dark m-3" type="button"><i
+                                class="fa fa-solid fa-thumbs-up mr-2"></i>Like</button>
+                        <button data-toggle="collapse" data-target="#comment" class="btn btn-dark m-3" type="button"><i
+                                class="fa fa-solid fa-comment mr-2"></i>Comment</button>
+                        <div id="comment" class="collapse">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Type your comment..">
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark" type="submit"><i
+                                            class="fa fa-solid fa-comment-dots"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media p-3">
+                            <img src="./images/profile.png" class="mr-3" style="width: 60px;">
+                            <div class="media-body">
+                                <h4 class="d-inline-block ml-2">Avin Wilson</h4>
+                                <small><i>July 28th 2022</i></small>
+                                <p>Nulla facilisi. Curabitur diam dolor, egestas non lacus eget, dignissim pellentesque
+                                    purus. Sed rutrum maximus libero. Maecenas eleifend interdum commodo.</p>
+                                <div class="media p-3">
+                                    <img src="./images/woman (2).png" class="mr-3" style="width: 60px">
+                                    <div class="media-body">
+                                        <h4 class="d-inline-block ml-2">Some Name</h4>
+                                        <small><i>July 28th 2022</i></small>
+                                        <p>Integer dui mauris, pulvinar convallis nunc quis, mattis rhoncus tortor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2 px-1 d-none d-sm-block">
+
+                <div class="feed shadow mx-auto text-center rounded">
+                    <h5 class="text-center pt-2">Event</h5>
+                    <img class="img-fluid p-2" src="./images/event-img.jpg" style="width: 100%;">
+                    <div class="">
+                        <p class=""></p>Saturday at 12 noon
+                        </p>
+                        <button class="btn btn-info mb-2">info</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
